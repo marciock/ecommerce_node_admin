@@ -4,10 +4,13 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const expressEjsLayouts=require('express-ejs-layouts')
-
+//rotas
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const testeRouter=require('./routes/teste');
+const listaProdutosRouter=require('./routes/produtos/lista');
+const addProdutosRouter=require('./routes/produtos/add');
+//
 
 const app = express();
 
@@ -21,9 +24,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// alias rota
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/teste',testeRouter);
+app.use('/produtos',listaProdutosRouter);
+app.use('/add_produtos',addProdutosRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

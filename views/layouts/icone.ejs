@@ -1,0 +1,15 @@
+<div class="row" style="margin-top: 2em;">
+
+    <% for (d of data) { %>
+        <div class="col">
+            <div class="text-center">
+                <a href="<%= d.url %>">
+                    <img src="<%= d.icon %>" style="width: 128px;height:auto;" >
+                    <h5 style="margin-top: 0;"><%= d.title %> </h5>
+                </a>
+            </div>
+        </div>
+
+    <% } %>
+
+</div>
