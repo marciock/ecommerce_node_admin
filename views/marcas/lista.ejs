@@ -1,0 +1,38 @@
+<%- contentFor('body') %>
+
+<h3><a href="/">Administrador</a> / Marcas</h3>
+
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Descrição</th>
+                
+            
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tecpix</td>
+                <td>Lorem ipsum cabalistics emundi imundis</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="fixed-bottom">
+    <div class="float-right">
+        <button class="btn btn-info bmd-btn-fab"
+        id="add">
+            <i class="material-icons">add</i>
+         </button>
+    </div>
+</div>
+<script>
+    const add=document.getElementById('add');
+    add.addEventListener('click',()=>{
+        window.location.href='/add_marcas';
+    })
+
+</script>

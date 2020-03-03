@@ -8,8 +8,14 @@ const expressEjsLayouts=require('express-ejs-layouts')
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const testeRouter=require('./routes/teste');
+//rotas de produtos
 const listaProdutosRouter=require('./routes/produtos/lista');
 const addProdutosRouter=require('./routes/produtos/add');
+//rotas de marcas
+const listMarcasRouter=require('./routes/marcas/lista');
+const addMarcasRouter=require('./routes/marcas/add');
+
+
 //
 
 const app = express();
@@ -28,8 +34,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/teste',testeRouter);
+//middleware produtos
 app.use('/produtos',listaProdutosRouter);
 app.use('/add_produtos',addProdutosRouter);
+//middleware marcas
+app.use('/marcas',listaMarcasRouter);
+app.use('/add_marca',addMarcasRouter);
+
 
 
 // catch 404 and forward to error handler
