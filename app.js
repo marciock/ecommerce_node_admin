@@ -12,7 +12,7 @@ const testeRouter=require('./routes/teste');
 const listaProdutosRouter=require('./routes/produtos/lista');
 const addProdutosRouter=require('./routes/produtos/add');
 //rotas de marcas
-const listMarcasRouter=require('./routes/marcas/lista');
+const listaMarcasRouter=require('./routes/marcas/lista');
 const addMarcasRouter=require('./routes/marcas/add');
 
 
@@ -39,7 +39,7 @@ app.use('/produtos',listaProdutosRouter);
 app.use('/add_produtos',addProdutosRouter);
 //middleware marcas
 app.use('/marcas',listaMarcasRouter);
-app.use('/add_marca',addMarcasRouter);
+app.use('/add_marcas',addMarcasRouter);
 
 
 
