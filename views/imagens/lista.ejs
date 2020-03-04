@@ -1,0 +1,40 @@
+<%- contentFor('body') %>
+
+<h3><a href="/">Administrador</a> / Imagens</h3>
+
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Produto</th>
+                <th>URL</th>
+                
+            
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Iamgem</td>
+                <td>Lorem ipsum</td>
+                <td>seila</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="fixed-bottom">
+    <div class="float-right">
+        <button class="btn btn-info bmd-btn-fab"
+        id="add">
+            <i class="material-icons">add</i>
+         </button>
+    </div>
+</div>
+<script>
+    const add=document.getElementById('add');
+    add.addEventListener('click',()=>{
+        window.location.href='/add_imagens';
+    })
+
+</script>

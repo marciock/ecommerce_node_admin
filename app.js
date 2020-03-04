@@ -14,7 +14,9 @@ const addProdutosRouter=require('./routes/produtos/add');
 //rotas de marcas
 const listaMarcasRouter=require('./routes/marcas/lista');
 const addMarcasRouter=require('./routes/marcas/add');
-
+//rotas imagens
+const listaImagensRouter=require('./routes/imagens/lista');
+const addImagensRouter=require('./routes/imagens/add');
 
 //
 
@@ -40,6 +42,9 @@ app.use('/add_produtos',addProdutosRouter);
 //middleware marcas
 app.use('/marcas',listaMarcasRouter);
 app.use('/add_marcas',addMarcasRouter);
+
+app.use('/imagens',listaImagensRouter);
+app.use('/add_imagens',addImagensRouter);
 
 
 

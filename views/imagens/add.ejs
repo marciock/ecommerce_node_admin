@@ -1,0 +1,16 @@
+<%- contentFor('body') %>
+
+<h3><a href="/imagens">/imagens</a> / Adicionar Nova Imagem </h3>
+
+<div class="row">
+    <form method="POST" action="/salva_imagens" class="col-lg-10">
+        <div class="form-group">
+            <label for="marca">Marca</label>
+            <select  name="produto" id="produto" class="form-control">
+                <option value="0">Produto</option>
+            </select>
+        </div>
+        <div style="border:dashed 1pt gray; height:15em;" 
+        id="view-image" class="row">
+           
+        </div>
