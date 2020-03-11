@@ -7,7 +7,13 @@
 const app = require('../app');
 const debug = require('debug')('ecommerce-aula:server');
 const http = require('http');
+const mongoose=require('mongoose');
 
+//conexao do mongodb
+mongoose.connect('mongodb://localhost/ecommerce',{userNewUrlParser:true});
+
+
+const db=mongoose.connection;
 /**
  * Get port from environment and store in Express.
  */
